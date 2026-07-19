@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Brandhaus Group</title>
+  <meta name="description" content="Start a project with Brandhaus Group — visualisation, production or brand marketing. Let's create something unforgettable.">
+  <link rel="icon" type="image/png" href="media/logos/brandhaus-group.png">
+  <link rel="preload" href="media/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="media/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="media/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="preloader" aria-hidden="true">
+    <img src="media/logos/brandhaus-group.png" alt="">
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Brandhaus Group — home">
+        <img src="media/logos/brandhaus-group.png" alt="">
+        <span class="nav-brand-word">BRANDHAUS<span>GROUP</span></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="builder.html">Builder</a>
+        <a href="studio.html">Studio</a>
+        <a href="promotions.html">Promotions</a>
+        <a class="btn btn--ghost" href="contact.html">Start a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero hero--page" aria-label="Contact Brandhaus Group">
+      <div class="hero-media" data-parallax="0.12">
+        <video data-hero autoplay muted loop playsinline preload="auto"
+               src="media/videos/render-hotel-lobby.mp4"
+               aria-hidden="true" tabindex="-1"></video>
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <p class="eyebrow">Contact</p>
+        <h1 id="contact-hero-title">Let's put your story<br>on screen.</h1>
+        <p class="lead">A development to launch, a production to make, a brand to grow — tell us where you're headed and we'll bring the craft.</p>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Info -->
+          <div data-reveal>
+            <p class="eyebrow">Start a Project</p>
+            <h2 id="contact-title" style="font-size:var(--text-h2);margin-bottom:1.2rem;">Every great world begins with a conversation.</h2>
+            <p class="lead" style="margin-bottom:2.4rem;">Tell us about your project and the right division will come back to you — Builder, Studio, or Promotions &amp; Marketing.</p>
+          </div>
+
+          <!-- Form -->
+          <form class="form" data-reveal="right" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-name">Full Name</label>
+                <input id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="f-company">Company</label>
+                <input id="f-company" name="company" type="text" placeholder="Company or studio" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="f-division">I'm interested in</label>
+                <select id="f-division" name="division" required>
+                  <option value="" selected disabled>Select a division</option>
+                  <option value="builder">Brandhaus Builder — Visualisation</option>
+                  <option value="studio">Brandhaus Studio — Production</option>
+                  <option value="promotions">Promotions &amp; Marketing</option>
+                  <option value="other">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-message">Project Details</label>
+              <textarea id="f-message" name="message" placeholder="Tell us about your project — plans, story, brand, timelines…" required></textarea>
+            </div>
+
+            <p class="form-status" role="status" aria-live="polite"></p>
+
+            <div>
+              <button class="btn btn--gold" type="submit">Send Enquiry <span class="btn-arrow" aria-hidden="true">→</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CINEMATIC BAND ================= -->
+    <section class="cine-band" aria-labelledby="contact-band-title">
+      <div class="cine-band-media" data-parallax="0.2">
+        <img src="media/images/capitals-of-the-world.png" alt="" loading="lazy">
+      </div>
+      <div class="container">
+        <p class="eyebrow eyebrow--center" data-reveal="fade">Brandhaus Group</p>
+        <h2 id="contact-band-title" data-split>Creative business solutions, worldwide.</h2>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <hr class="shimmer-rule footer-crown" aria-hidden="true">
+    <div class="container footer-core">
+      <div class="footer-brand">
+        <p class="footer-word">Brandhaus<span>Group</span></p>
+        <p class="footer-sub">Property &middot; Entertainment &middot; Brand</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="builder.html">Builder</a>
+        <a href="studio.html">Studio</a>
+        <a href="promotions.html">Promotions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom-wrap">
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Brandhaus Group. All rights reserved.</p>
+        <div class="divisions-inline" aria-hidden="true">
+          <span>Builder</span><span>Studio</span><span>Promotions</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/video.js" defer></script>
+</body>
+</html>
