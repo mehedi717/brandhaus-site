@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Brandhaus Group</title>
+  <meta name="description" content="Brandhaus Group combines creative excellence with industry ingenuity — three divisions delivering visualisation, entertainment production and marketing under one roof.">
+  <link rel="icon" type="image/png" href="media/logos/brandhaus-group.png">
+  <link rel="preload" href="media/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="media/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="media/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="preloader" aria-hidden="true">
+    <img src="media/logos/brandhaus-group.png" alt="">
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Brandhaus Group — home">
+        <img src="media/logos/brandhaus-group.png" alt="">
+        <span class="nav-brand-word">BRANDHAUS<span>GROUP</span></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="builder.html">Builder</a>
+        <a href="studio.html">Studio</a>
+        <a href="promotions.html">Promotions</a>
+        <a class="btn btn--ghost" href="contact.html">Start a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero hero--page" aria-label="About Brandhaus Group">
+      <div class="hero-media" data-parallax="0.14">
+        <img src="media/images/art-through-the-ages.png" alt="" fetchpriority="high">
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <p class="eyebrow">About the Group</p>
+        <h1>The house where<br>stories are built.</h1>
+        <p class="lead">Brandhaus Group is a full-service creative studio delivering innovative visualisation, marketing and content solutions across the property and entertainment sectors.</p>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <span class="scroll-cue-line"></span>
+      </div>
+    </section>
+
+    <!-- ================= STORY ================= -->
+    <section class="section" aria-labelledby="story-title">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <p class="eyebrow" data-reveal="fade">Our Approach</p>
+            <h2 id="story-title" data-split>Creative excellence. Industry ingenuity.</h2>
+          </div>
+          <div data-reveal>
+            <p class="lead" style="margin-bottom:1.4rem;">Combining creative excellence with industry ingenuity, Brandhaus Group develops integrated marketing and promotional strategies that help businesses launch projects, build brands, engage customers and create lasting commercial impact.</p>
+            <p class="lead">Whether the canvas is a residential masterplan, a streaming series, a children's animation or a global campaign — the standard is the same: story first, craft always.</p>
+          </div>
+        </div>
+
+        <hr class="shimmer-rule" aria-hidden="true">
+
+        <!-- Values -->
+        <div class="values-grid" data-reveal-stagger>
+          <div class="value-card">
+            <span class="value-index">01</span>
+            <h3>Accurate</h3>
+            <p>True to your plans, your brand and your brief. High detail. Real impact.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-index">02</span>
+            <h3>Engaging</h3>
+            <p>Visuals and videos that tell the story — marketing that inspires confidence.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-index">03</span>
+            <h3>On Time, On Brief</h3>
+            <p>Reliable. Efficient. Delivered. Professional outcomes on every engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= THE THREE HOUSES ================= -->
+    <section class="section section--tint" aria-labelledby="houses-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--center" data-reveal="fade">Structure</p>
+          <h2 id="houses-title" data-split>Three divisions. One signature.</h2>
+        </div>
+
+        <!-- Builder -->
+        <article class="case">
+          <figure class="case-media" data-reveal-media style="aspect-ratio:16/10;">
+            <video data-autoplay data-src="media/videos/floorplan-to-house.mp4" muted loop playsinline aria-label="Floorplan transforming into a finished, photorealistic home"></video>
+          </figure>
+          <div data-reveal="right">
+            <img src="media/logos/brandhaus-builder.png" alt="" width="72" height="72" style="border-radius:14px;border:1px solid var(--hairline);margin-bottom:1.2rem;">
+            <h3>Brandhaus Builder</h3>
+            <p>An advanced visualisation platform for off-the-plan marketing — transforming architectural drawings, CAD files and builder plans into photorealistic imagery, cinematic animations and immersive walkthroughs.</p>
+            <ul class="case-points">
+              <li>Residential</li>
+              <li>Commercial</li>
+              <li>Town Planning</li>
+            </ul>
+            <a class="btn btn--text" href="builder.html">Explore Builder <span class="btn-arrow" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- Studio -->
+        <article class="case case--flip">
+          <figure class="case-media" data-reveal-media style="aspect-ratio:16/10;">
+            <video data-autoplay data-src="media/videos/ultimate-trailer.mp4" muted loop playsinline aria-label="Scenes from Brandhaus Studio's action feature, Ultimate"></video>
+          </figure>
+          <div data-reveal="left">
+            <img src="media/logos/brandhaus-studio.png" alt="" width="72" height="72" style="border-radius:14px;border:1px solid var(--hairline);margin-bottom:1.2rem;">
+            <h3>Brandhaus Studio</h3>
+            <p>Original film, television, streaming and vertical productions, documentaries, children's content and computer games — with creative development, production and international distribution under one roof.</p>
+            <ul class="case-points">
+              <li>Film / TV / Streaming / Vertical Productions</li>
+              <li>Computer Games</li>
+              <li>TV &amp; Online Commercials</li>
+            </ul>
+            <a class="btn btn--text" href="studio.html">Explore Studio <span class="btn-arrow" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- Promotions -->
+        <article class="case case--no-border">
+          <figure class="case-media" data-reveal-media style="aspect-ratio:16/10;">
+            <video data-autoplay data-src="media/videos/commercial-advertising.mp4" muted loop playsinline aria-label="Commercial advertising campaign montage"></video>
+          </figure>
+          <div data-reveal="right">
+            <img src="media/logos/brandhaus-advertising.png" alt="" width="72" height="72" style="border-radius:14px;border:1px solid var(--hairline);margin-bottom:1.2rem;">
+            <h3>Brandhaus Promotions &amp; Marketing</h3>
+            <p>Strategic advertising and brand integration that makes brands a natural part of the stories people watch, play and share — designed to build trust and generate measurable commercial outcomes.</p>
+            <ul class="case-points">
+              <li>Product Integration</li>
+              <li>Brand Promotions</li>
+              <li>Cross-platform Marketing Rollouts</li>
+            </ul>
+            <a class="btn btn--text" href="promotions.html">Explore Promotions <span class="btn-arrow" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="section section--tight-top section--tight-bottom" aria-label="Group in numbers">
+      <div class="container">
+        <div class="stats" data-reveal>
+          <div class="stat">
+            <span class="stat-value" data-count="20" data-count-suffix="+">0</span>
+            <span class="stat-label">Original Productions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-count="12">0</span>
+            <span class="stat-label">Documentary Features</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-count="7">0</span>
+            <span class="stat-label">Content Genres</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-count="3">0</span>
+            <span class="stat-label">Creative Divisions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <img class="bh-mark" src="media/logos/brandhaus-group.png" alt="" data-reveal="scale">
+        <h2 id="cta-title" data-split>Your story starts in this house.</h2>
+        <p class="lead" data-reveal>Tell us what you're building — a development, a production, a brand. We'll bring the world it deserves.</p>
+        <div data-reveal>
+          <a class="btn btn--underline" href="contact.html">Start the Conversation <span class="btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <hr class="shimmer-rule footer-crown" aria-hidden="true">
+    <div class="container footer-core">
+      <div class="footer-brand">
+        <p class="footer-word">Brandhaus<span>Group</span></p>
+        <p class="footer-sub">Property &middot; Entertainment &middot; Brand</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="builder.html">Builder</a>
+        <a href="studio.html">Studio</a>
+        <a href="promotions.html">Promotions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom-wrap">
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Brandhaus Group. All rights reserved.</p>
+        <div class="divisions-inline" aria-hidden="true">
+          <span>Builder</span><span>Studio</span><span>Promotions</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/video.js" defer></script>
+</body>
+</html>

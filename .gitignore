@@ -1,5 +1,4 @@
 # --- Temporary: homepage-only deploy (remove entries as pages are added) ---
-about.html
 builder.html
 studio.html
 promotions.html
@@ -9,7 +8,6 @@ contact.html
 /media/images/afl-game-of-a-nation.png
 /media/images/alien-spawn.png
 /media/images/amazing-super-buddies.png
-/media/images/art-through-the-ages.png
 /media/images/battle-for-evera.png
 /media/images/brand-integration.png
 /media/images/builder-plans-to-possibility.png
@@ -29,13 +27,9 @@ contact.html
 /media/images/the-worlds-game.png
 /media/images/town-planner.png
 /media/images/vehicles.png
-/media/logos/brandhaus-advertising.png
-/media/logos/brandhaus-builder.png
-/media/logos/brandhaus-studio.png
 /media/videos/amazing-super-buddies-motion.mp4
 /media/videos/battle-for-evera-motion.mp4
 /media/videos/builder-promo.mp4
-/media/videos/commercial-advertising.mp4
 /media/videos/fight-till-death-motion.mp4
 /media/videos/games-animated.mp4
 /media/videos/halloween-killers-motion.mp4

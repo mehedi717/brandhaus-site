@@ -176,7 +176,7 @@
   background-size: 200% 100%;
   animation: shimmer 4s linear infinite;
   border: 0;
-  margin-block: clamp(2.5rem, 6vw, 4rem);
+  margin-block: clamp(5rem, 11vw, 8rem);
 }
 
 @keyframes shimmer {
@@ -228,6 +228,48 @@
 @keyframes play-ripple {
   0% { transform: scale(1); opacity: 0.9; }
   70%, 100% { transform: scale(1.65); opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   Value index badges (numbered circle, "01 / 02 / 03")
+   -------------------------------------------------------------------------- */
+.value-index {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--gold-light);
+  border: 1px solid var(--hairline-gold);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.value-index::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  animation: value-ripple 2.8s var(--ease-out) infinite;
+}
+
+.values-grid > .value-card:nth-child(2) .value-index::after {
+  animation-delay: 0.5s;
+}
+
+.values-grid > .value-card:nth-child(3) .value-index::after {
+  animation-delay: 1s;
+}
+
+@keyframes value-ripple {
+  0% { transform: scale(1); opacity: 0.9; }
+  70%, 100% { transform: scale(1.5); opacity: 0; }
 }
 
 /* --------------------------------------------------------------------------

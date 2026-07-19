@@ -54,6 +54,30 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../media/fonts/cinzel-latin.woff2') format('woff2');
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../media/fonts/cormorant-garamond-latin.woff2') format('woff2');
+  font-weight: 300 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../media/fonts/cormorant-garamond-italic-latin.woff2') format('woff2');
+  font-weight: 300 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* --------------------------------------------------------------------------
    Design tokens
    -------------------------------------------------------------------------- */
@@ -76,10 +100,11 @@
   --hairline-gold: rgba(212, 175, 55, 0.28);
 
   /* Type */
-  --font-display: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-hero: 'Cinzel', Georgia, serif;
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', 'Segoe UI', sans-serif;
-  --font-text: 'DM Sans', 'Segoe UI', sans-serif;
-  --text-hero: clamp(2.9rem, 7.2vw, 7rem);
+  --font-text: 'Cormorant Garamond', 'Segoe UI', serif;
+  --text-hero: clamp(2.9rem, 7.2vw, 75px);
   --text-h2: clamp(2.1rem, 4.6vw, 4.2rem);
   --text-h3: clamp(1.4rem, 2.4vw, 2.1rem);
   --text-lead: clamp(1.05rem, 1.4vw, 1.3rem);
@@ -198,10 +223,16 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 530;
+  font-weight: 500;
   line-height: 1.12;
   letter-spacing: -0.005em;
   text-wrap: balance;
+}
+
+h1 {
+  font-family: var(--font-hero);
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 h2 {
@@ -299,6 +330,14 @@ h2 em {
   background: linear-gradient(180deg, var(--bg) 0%, #0b0a08 50%, var(--bg) 100%);
 }
 
+.section--tight-top {
+  padding-top: clamp(2rem, 4vh, 3.5rem);
+}
+
+.section--tight-bottom {
+  padding-bottom: clamp(2rem, 4vh, 3.5rem);
+}
+
 .section-head {
   max-width: 900px;
   margin-bottom: clamp(3rem, 6vw, 5rem);
@@ -318,6 +357,10 @@ h2 em {
   margin-inline: auto;
 }
 
+#story-title {
+  font-size: clamp(1.9rem, 3.8vw, 3.4rem);
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -335,6 +378,41 @@ h2 em {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* --------------------------------------------------------------------------
+   Value cards ("Our Approach" — Accurate / Engaging / On Time, On Brief)
+   -------------------------------------------------------------------------- */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 2.6vw, 2rem);
+}
+
+.value-card {
+  position: relative;
+  padding: clamp(2.2rem, 3.2vw, 2.8rem);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.035) 0%, transparent 60%);
+  transition: border-color 0.5s var(--ease-out), transform 0.5s var(--ease-out), background 0.5s var(--ease-out);
+}
+
+.value-card:hover {
+  border-color: var(--hairline-gold);
+  transform: translateY(-6px);
+  background: linear-gradient(165deg, rgba(212, 175, 55, 0.09) 0%, transparent 62%);
+}
+
+.value-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.value-card p {
+  color: var(--ink-70);
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* --------------------------------------------------------------------------
@@ -418,6 +496,28 @@ h2 em {
 .btn--text:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.btn--underline {
+  padding: 0 0 0.4rem;
+  border-radius: 0;
+  border-bottom: 1px solid var(--hairline);
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+
+.btn--underline .btn-arrow {
+  font-family: var(--font-body);
+  font-size: 0.85em;
+}
+
+.btn--underline:hover {
+  color: var(--gold-light);
+  border-color: var(--gold);
 }
 
 /* --------------------------------------------------------------------------
@@ -584,7 +684,7 @@ h2 em {
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
   isolation: isolate;
 }
@@ -616,7 +716,6 @@ h2 em {
 .hero-inner {
   width: min(100% - 2 * var(--gutter), 1440px);
   margin-inline: auto;
-  padding-bottom: clamp(5rem, 14vh, 9rem);
 }
 
 .hero h1 {
@@ -707,7 +806,7 @@ h2 em {
 
 /* Page hero (interior pages) */
 .hero--page {
-  min-height: 86svh;
+  min-height: 100svh;
 }
 
 /* --------------------------------------------------------------------------
@@ -991,7 +1090,7 @@ h2 em {
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(1.5rem, 3vw, 2rem);
   border-block: 1px solid var(--hairline);
-  padding-block: clamp(2.6rem, 5vw, 4rem);
+  padding-block: clamp(1.6rem, 3vw, 2.4rem);
 }
 
 .stat {
@@ -1037,7 +1136,7 @@ h2 em {
 }
 
 .group-manifesto h2 {
-  max-width: 24ch;
+  max-width: 34ch;
   margin-inline: auto;
   margin-bottom: 1.8rem;
 }
@@ -1600,6 +1699,10 @@ h2 em {
   border-bottom: 1px solid var(--hairline);
 }
 
+.case:last-of-type.case--no-border {
+  border-bottom: none;
+}
+
 .case--flip .case-media {
   order: 2;
 }
@@ -1639,6 +1742,7 @@ h2 em {
 
 .case p {
   color: var(--ink-70);
+  font-size: 1.1rem;
   max-width: 54ch;
   margin-bottom: 1.6rem;
 }
@@ -1836,6 +1940,7 @@ h2 em {
 }
 
 .cta-band .lead {
+  color: var(--ink-50);
   margin-inline: auto;
   margin-bottom: 2.6rem;
 }
@@ -1962,7 +2067,6 @@ h2 em {
    -------------------------------------------------------------------------- */
 .site-footer {
   position: relative;
-  text-align: center;
   background:
     radial-gradient(55% 80% at 50% 120%, rgba(212, 175, 55, 0.1) 0%, transparent 65%),
     linear-gradient(180deg, var(--bg) 0%, #0a0906 100%);
@@ -1973,66 +2077,55 @@ hr.footer-crown {
 }
 
 .footer-core {
-  display: grid;
-  justify-items: center;
-  padding-block: clamp(4.5rem, 9vw, 7.5rem) clamp(3.5rem, 7vw, 6rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: clamp(3rem, 6vw, 4.5rem);
 }
 
-.footer-mark {
-  width: 64px;
-  border-radius: 12px;
-  border: 1px solid var(--hairline);
-  margin-bottom: 1.7rem;
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .footer-word {
-  font-family: var(--font-body);
-  font-size: 1.02rem;
-  font-weight: 640;
-  letter-spacing: 0.42em;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-left: 0.42em; /* optically recenter the tracked text */
-  margin-bottom: 1.2rem;
 }
 
 .footer-word span {
   color: var(--gold);
-  font-weight: 420;
-  margin-left: 0.55em;
+  font-weight: 400;
+  margin-left: 0.5em;
 }
 
-.footer-tag {
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
-  line-height: 1.35;
-  color: var(--ink-70);
-  max-width: min(665px, 100%);
-  margin-inline: auto;
-  margin-bottom: clamp(2.6rem, 5vw, 3.8rem);
-}
-
-.footer-tag em {
-  font-style: italic;
-  background: var(--gold-grad-logo);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.footer-sub {
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 560;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-50);
 }
 
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  column-gap: 1.4rem;
-  row-gap: 1rem;
-  margin-bottom: clamp(2.6rem, 5vw, 3.6rem);
+  column-gap: 2.2rem;
+  row-gap: 0.8rem;
 }
 
 .footer-nav a {
   font-size: 0.72rem;
   font-weight: 560;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--ink-70);
   transition: color 0.3s;
@@ -2040,30 +2133,6 @@ hr.footer-crown {
 
 .footer-nav a:hover {
   color: var(--gold-light);
-}
-
-.footer-nav a + a::before {
-  content: '◆';
-  color: var(--gold);
-  font-size: 0.45rem;
-  vertical-align: 0.16em;
-  margin-right: 1.4rem;
-  display: inline-block;
-}
-
-.footer-mail {
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  letter-spacing: 0.1em;
-  color: var(--ink-50);
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid var(--hairline-gold);
-  transition: color 0.3s, border-color 0.3s;
-}
-
-.footer-mail:hover {
-  color: var(--gold-light);
-  border-color: var(--gold);
 }
 
 .footer-bottom-wrap {
@@ -2077,16 +2146,24 @@ hr.footer-crown {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  font-size: 0.78rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--ink-50);
 }
 
 .footer-bottom .divisions-inline {
   display: flex;
-  gap: 1.6rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-size: 0.66rem;
+  font-size: 0.68rem;
+  color: var(--ink-50);
+}
+
+.footer-bottom .divisions-inline span:not(:last-child)::after {
+  content: '\2022';
+  color: var(--gold);
+  margin: 0 0.7em;
 }
 
 /* --------------------------------------------------------------------------

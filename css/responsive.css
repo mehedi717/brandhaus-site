@@ -27,7 +27,8 @@
   }
 
   .grid-3,
-  .grid-4 {
+  .grid-4,
+  .values-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -189,7 +190,8 @@
   }
 
   .grid-3,
-  .grid-4 {
+  .grid-4,
+  .values-grid {
     grid-template-columns: 1fr;
   }
 
@@ -218,18 +220,20 @@
     aspect-ratio: 4 / 4.6;
   }
 
+  .footer-core {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .footer-nav {
     column-gap: 1.5rem;
     row-gap: 0.9rem;
   }
 
-  .footer-nav a + a::before {
-    display: none;
-  }
-
   .footer-bottom {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .stats {
