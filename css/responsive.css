@@ -225,6 +225,10 @@
     align-items: flex-start;
   }
 
+  .footer-word {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
   .footer-nav {
     column-gap: 1.5rem;
     row-gap: 0.9rem;
