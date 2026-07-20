@@ -47,7 +47,7 @@
     <!-- ================= HERO ================= -->
     <section class="hero" aria-label="Introduction">
       <div class="hero-media">
-        <video data-hero autoplay muted loop playsinline preload="auto"
+        <video data-hero data-hero-start="4" autoplay muted loop playsinline preload="auto"
                src="media/videos/ultimate-trailer.mp4"
                aria-hidden="true" tabindex="-1"></video>
       </div>
@@ -55,8 +55,7 @@
 
       <div class="hero-inner">
         <p class="eyebrow">Creative Business Solutions</p>
-        <h1>We build <em>worlds</em><br>before they exist.</h1>
-        <p class="lead">Brandhaus Group is a full-service creative studio delivering innovative visualisation, marketing and content solutions across the property and entertainment sectors.</p>
+        <p class="lead hero-lead--large">Brandhaus Group is a full-service creative studio delivering innovative visualisation, marketing and content solutions across the property and entertainment sectors.</p>
         <div class="hero-actions">
           <a class="btn btn--gold" href="#work-title">Explore Our Work <span class="btn-arrow" aria-hidden="true">→</span></a>
           <a class="btn btn--ghost" href="contact.html">Start a Project</a>
@@ -82,41 +81,90 @@
       </div>
     </div>
 
-    <!-- ================= INTRO / MANIFESTO ================= -->
-    <section class="section group-manifesto" aria-labelledby="intro-title">
+    <!-- ================= DIVISIONS ================= -->
+    <section class="section section--tint" aria-labelledby="divisions-title">
       <div class="container">
-        <p class="eyebrow eyebrow--center" data-reveal="fade">The Group</p>
-        <h2 id="intro-title" data-reveal>Creative excellence, engineered for <em>commercial impact.</em></h2>
-        <p class="lead" data-reveal>Combining creative excellence with industry ingenuity, Brandhaus Group develops integrated marketing and promotional strategies that help businesses launch projects, build brands, engage customers and create lasting commercial impact.</p>
+        <div class="section-head section-head--center">
+          <h2 id="divisions-title" data-split>One Group, Many Brands</h2>
+          <p class="lead" data-reveal>Each Brandhaus division is a specialist studio in its own right — together, they form a complete creative ecosystem.</p>
+        </div>
 
-        <ul class="group-facts" data-reveal-stagger>
-          <li>
-            <span class="group-fact-term">One Group</span>
-            <span class="group-fact-desc">Concept, craft and distribution — a single creative pipeline under one roof.</span>
-          </li>
-          <li>
-            <span class="group-fact-term">Three Divisions</span>
-            <span class="group-fact-desc">Builder, Studio, and Promotions &amp; Marketing — each a specialist in its craft.</span>
-          </li>
-          <li>
-            <span class="group-fact-term">Every Discipline</span>
-            <span class="group-fact-desc">From photorealistic architecture to feature film, game worlds and global campaigns.</span>
-          </li>
-        </ul>
+        <div class="divisions" data-reveal-stagger>
+          <!-- Builder -->
+          <article class="division-card">
+            <div class="division-card-media">
+              <video data-autoplay data-src="media/videos/render-kitchen.mp4" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
+            </div>
+            <div class="division-card-body">
+              <h3>Brandhaus Builder</h3>
+              <p>Photorealistic visualisation that sells developments off the plan — before a single brick is laid.</p>
+              <ul class="division-card-tags">
+                <li>Residential</li>
+                <li>Commercial</li>
+                <li>Town Planning</li>
+              </ul>
+              <a class="card-cta card-link" href="builder.html">
+                Enter Builder
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true"><path d="M11 1l4 4-4 4M15 5H1" stroke="currentColor" stroke-width="1.4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Studio -->
+          <article class="division-card">
+            <div class="division-card-media">
+              <img src="media/images/the-sanctuary.png" alt="" loading="lazy">
+            </div>
+            <div class="division-card-body">
+              <h3>Brandhaus Studio</h3>
+              <p>Original film, television, streaming, games and children's content with international distribution.</p>
+              <ul class="division-card-tags">
+                <li>Film &amp; TV</li>
+                <li>Streaming</li>
+                <li>Computer Games</li>
+              </ul>
+              <a class="card-cta card-link" href="studio.html">
+                Enter Studio
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true"><path d="M11 1l4 4-4 4M15 5H1" stroke="currentColor" stroke-width="1.4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Promotions -->
+          <article class="division-card">
+            <div class="division-card-media">
+              <img src="media/images/brandhaus-promotions-poster.png" alt="" loading="lazy">
+            </div>
+            <div class="division-card-body">
+              <h3>Brandhaus Promotions</h3>
+              <p>Strategic advertising and brand integration that weaves your brand into the stories people love.</p>
+              <ul class="division-card-tags">
+                <li>Product Integration</li>
+                <li>Brand Promotions</li>
+                <li>Cross-platform</li>
+              </ul>
+              <a class="card-cta card-link" href="promotions.html">
+                Enter Promotions
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true"><path d="M11 1l4 4-4 4M15 5H1" stroke="currentColor" stroke-width="1.4"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
-
-    <div class="container" aria-hidden="true">
-      <hr class="shimmer-rule shimmer-rule--short" style="margin-block:0;">
-    </div>
 
     <!-- ================= WHAT WE DO ================= -->
     <section class="section" aria-labelledby="wwd-title" style="padding-top:clamp(8rem, 17vh, 14rem);">
       <div class="container">
         <div class="grid-2">
-          <figure class="editorial-media editorial-media--frame" data-reveal-media style="aspect-ratio:3/2;">
-            <video data-autoplay data-src="media/videos/render-hotel-lobby.mp4" muted loop playsinline aria-label="Photorealistic rendered hotel lobby walkthrough"></video>
-          </figure>
+          <div class="wwd-media-stack">
+            <figure class="editorial-media editorial-media--frame" data-reveal-media style="aspect-ratio:3/2;">
+              <video data-autoplay data-src="media/videos/floorplan-to-house.mp4" muted loop playsinline aria-label="Brandhaus Builder floorplan-to-finished-room transformation"></video>
+            </figure>
+            <figure class="editorial-media editorial-media--frame" data-reveal-media style="aspect-ratio:3/2;">
+              <video data-autoplay data-src="media/videos/render-hotel-lobby.mp4" muted loop playsinline aria-label="Photorealistic rendered hotel lobby walkthrough"></video>
+            </figure>
+          </div>
           <div data-reveal="right">
             <p class="eyebrow">What We Do</p>
             <h3 id="wwd-title" style="font-size:var(--text-h3); margin-bottom:1rem;">From first sketch to worldwide screen.</h3>
@@ -149,82 +197,6 @@
       </div>
     </section>
 
-    <!-- ================= DIVISIONS ================= -->
-    <section class="section section--tint" aria-labelledby="divisions-title">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--center" data-reveal="fade">Three Divisions</p>
-          <h2 id="divisions-title" data-split>One house. Every craft.</h2>
-          <p class="lead" data-reveal>Each Brandhaus division is a specialist studio in its own right — together, they form a complete creative ecosystem.</p>
-        </div>
-
-        <div class="divisions" data-reveal-stagger>
-          <!-- Builder -->
-          <article class="division-card">
-            <div class="division-card-media">
-              <video data-autoplay data-src="media/videos/render-kitchen.mp4" muted loop playsinline aria-hidden="true" tabindex="-1"></video>
-            </div>
-            <div class="division-card-body">
-              <span class="division-card-num">Division 01</span>
-              <h3>Brandhaus Builder</h3>
-              <p>Photorealistic visualisation that sells developments off the plan — before a single brick is laid.</p>
-              <ul class="division-card-tags">
-                <li>Residential</li>
-                <li>Commercial</li>
-                <li>Town Planning</li>
-              </ul>
-              <a class="card-cta card-link" href="builder.html">
-                Enter Builder
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true"><path d="M11 1l4 4-4 4M15 5H1" stroke="currentColor" stroke-width="1.4"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Studio -->
-          <article class="division-card">
-            <div class="division-card-media">
-              <img src="media/images/the-sanctuary.png" alt="" loading="lazy">
-            </div>
-            <div class="division-card-body">
-              <span class="division-card-num">Division 02</span>
-              <h3>Brandhaus Studio</h3>
-              <p>Original film, television, streaming, games and children's content with international distribution.</p>
-              <ul class="division-card-tags">
-                <li>Film &amp; TV</li>
-                <li>Streaming</li>
-                <li>Computer Games</li>
-              </ul>
-              <a class="card-cta card-link" href="studio.html">
-                Enter Studio
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true"><path d="M11 1l4 4-4 4M15 5H1" stroke="currentColor" stroke-width="1.4"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Promotions -->
-          <article class="division-card">
-            <div class="division-card-media">
-              <img src="media/images/marketing-approaches.png" alt="" loading="lazy" style="object-position: 88% center;">
-            </div>
-            <div class="division-card-body">
-              <span class="division-card-num">Division 03</span>
-              <h3>Promotions &amp; Marketing</h3>
-              <p>Strategic advertising and brand integration that weaves your brand into the stories people love.</p>
-              <ul class="division-card-tags">
-                <li>Product Integration</li>
-                <li>Brand Promotions</li>
-                <li>Cross-platform</li>
-              </ul>
-              <a class="card-cta card-link" href="promotions.html">
-                Enter Promotions
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true"><path d="M11 1l4 4-4 4M15 5H1" stroke="currentColor" stroke-width="1.4"/></svg>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ================= FEATURED WORK ================= -->
     <section class="section" aria-labelledby="work-title">
       <div class="container">
@@ -235,17 +207,12 @@
         </div>
 
         <div class="bento" data-reveal-stagger>
-          <a class="bento-item bento-item--h2" href="#" data-motion="media/videos/ultimate-motion.mp4">
+          <a class="bento-item" href="#" data-motion="media/videos/ultimate-motion.mp4">
             <img src="media/images/ultimate.png" alt="Ultimate — action feature film poster" loading="lazy">
             <div class="bento-caption"><h3>Ultimate</h3><span>Action Feature</span></div>
           </a>
 
-          <a class="bento-item bento-item--w2" href="#" data-motion="media/videos/hotel-aldon-motion.mp4">
-            <img src="media/images/hotel-aldon.png" alt="Hotel Aldon — wartime thriller poster, Berlin 1942" loading="lazy">
-            <div class="bento-caption"><h3>Hotel Aldon</h3><span>Thriller Series</span></div>
-          </a>
-
-          <a class="bento-item bento-item--h2" href="#" data-motion="media/videos/supremacy-motion.mp4">
+          <a class="bento-item" href="#" data-motion="media/videos/supremacy-motion.mp4">
             <img src="media/images/supremacy.png" alt="Supremacy — sci-fi war epic poster" loading="lazy">
             <div class="bento-caption"><h3>Supremacy</h3><span>Sci-Fi Epic</span></div>
           </a>
@@ -253,11 +220,6 @@
           <a class="bento-item" href="#" data-motion="media/videos/fantastic-fables-motion.mp4">
             <img src="media/images/fantastic-fables.png" alt="Fantastic Fables — collection of six animated children's stories" loading="lazy">
             <div class="bento-caption"><h3>Fantastic Fables</h3><span>Children's</span></div>
-          </a>
-
-          <a class="bento-item" href="#">
-            <img src="media/images/hauntings.png" alt="Hauntings — documentary of first-hand ghostly encounters" loading="lazy">
-            <div class="bento-caption"><h3>Hauntings</h3><span>Documentary</span></div>
           </a>
 
           <a class="bento-item bento-item--w2" href="#">
@@ -306,8 +268,8 @@
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container">
         <img class="bh-mark" src="media/logos/brandhaus-group.png" alt="" data-reveal="scale">
-        <h2 id="cta-title" data-split>Let's create something unforgettable.</h2>
-        <p class="lead" data-reveal>Launch a development, produce a story, or put your brand inside one — the house is open.</p>
+        <h2 id="cta-title" data-split>Let's create something unforgettable</h2>
+        <p class="lead" data-reveal>Launch a development, produce a story, or put your brand inside one. The house is open.</p>
         <div data-reveal>
           <a class="btn btn--underline" href="contact.html">Start the Conversation <span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
@@ -322,7 +284,7 @@
     <div class="container footer-core">
       <div class="footer-brand">
         <p class="footer-word">Brandhaus<span>Group</span></p>
-        <p class="footer-sub">Property &middot; Entertainment &middot; Brand</p>
+        <p class="footer-sub">Property &middot; Entertainment &middot; Branding</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="index.html">Home</a>

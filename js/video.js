@@ -125,6 +125,20 @@
     document.querySelectorAll('video[data-hero]').forEach((video) => {
       video.muted = true;
       video.defaultMuted = true;
+
+      // Some hero clips open with a studio vanity card baked into the
+      // footage; data-hero-start skips past it and, since native `loop`
+      // always restarts at 0, we take over looping to keep skipping it.
+      const start = parseFloat(video.dataset.heroStart || '0');
+      if (start > 0) {
+        video.loop = false;
+        video.addEventListener('loadedmetadata', () => { video.currentTime = start; }, { once: true });
+        video.addEventListener('ended', () => {
+          video.currentTime = start;
+          video.play().catch(() => {});
+        });
+      }
+
       video.play().catch(() => {
         // Autoplay blocked: retry on first interaction.
         const kick = () => {
