@@ -176,10 +176,6 @@
     font-size: clamp(2.5rem, 11vw, 3.4rem);
   }
 
-  .hero-inner {
-    padding-bottom: 6rem;
-  }
-
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
@@ -218,6 +214,11 @@
 
   .carousel-slide {
     aspect-ratio: 4 / 4.6;
+  }
+
+  #process-reel,
+  .carousel--compact {
+    max-width: 100%;
   }
 
   .footer-core {

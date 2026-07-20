@@ -1346,6 +1346,14 @@ h2 em {
   background: var(--bg-2);
 }
 
+/* Builder process reel + carousel run oversized on wide desktop viewports;
+   scaled down 15% here, restored to full width for mobile in responsive.css */
+#process-reel,
+.carousel--compact {
+  max-width: 85%;
+  margin-inline: auto;
+}
+
 .carousel-track {
   display: flex;
   transition: transform 0.9s var(--ease-luxe);
@@ -2210,6 +2218,7 @@ hr.footer-crown {
 .preloader.is-done {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .preloader img {
